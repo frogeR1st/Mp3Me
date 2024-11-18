@@ -1,0 +1,123 @@
+/*Fonts:
+Lilita One
+Kosugi Maru
+Kanit
+*/
+
+:root {
+    background-color: var(--BackgroundC1);
+
+    /*Color*/
+    --Color1: #2d2d2a;
+    --Color2: #fffcff; 
+    --Color3: #ef6351;
+    --BackgroundC1: #202020;
+    --BackgroundC2: #181818;
+    --BackgroundC3: #0c0c0c;
+    --LinkColor1: #ff624e;
+    --LinkColor2: #ff4e4e;
+    --LinkColor3: #f1371e;
+    --LinkColor4: #ff1e00;
+
+    /*font family*/
+    --FFamily1: "Kanit";
+    --FFamily2: "Kosugi Maru";
+    --FFamily3: "Lilita One";
+    --FFamilyBackup: sans-serif;
+}
+
+/*ids*/
+#TopBar {
+    position: sticky;
+    top: 1em;
+
+    margin: 1em;
+    height: 7em;
+    padding: 1em;
+    padding-bottom: 0;
+
+    overflow:hidden;
+
+    z-index: 1;
+}
+
+#PlayerBar {
+    position: fixed;
+    bottom: 0;
+
+    margin: 1em;
+    height: 6em;
+    width: calc(100% - 56px);
+    padding: 0.5em;
+    padding-bottom: 0;
+
+    overflow:hidden;
+
+    z-index: 1;
+}
+
+/*Classes*/
+
+.Progressbar1 {
+    border-radius: 1.5em;
+    border: 0;
+
+
+    background-color: var(--Color1);
+}
+
+progress::-moz-progress-bar {
+    background: var(--Color3);
+  }
+
+
+.Container1 {
+    background-color: var(--BackgroundC3);
+    border-radius: 1.5em;
+    border: 0.25em;
+    border-color: var(--Color3);
+    border-style: solid;
+}
+
+.FontStyle1 {
+    color: var(--Color2);
+    font-family: var(--FFamily3), var(--FFamilyBackup);
+    font-size:3em;
+}
+
+.FontStyle2 {
+    position: relative;
+
+    color: var(--Color2);
+    font-family: var(--FFamily2), var(--FFamilyBackup);
+    font-size:2em;
+}
+
+.ImgButton {
+    background-color: transparent;
+    border: 0;
+    border-color: transparent;
+}
+
+.ATopBar1 {
+    font-family: var(--FFamily2);
+    font-size: 2em;
+    text-decoration: none;
+    margin: 0.65em;
+}
+
+.ATopBar1:link {
+    color: var(--LinkColor1);
+}
+
+.ATopBar1:visited {
+    color: var(--LinkColor2);
+} 
+
+.ATopBar1:hover {
+    color: var(--LinkColor3);
+}
+
+.ATopBar1:active {
+    color: var(--LinkColor4);
+}

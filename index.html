@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mp3Me - Main Page</title>
-    <!--Style-->
-    <link rel="stylesheet" href="styles\style1.css"><link>
-    <!--Fonts-->
+    <!--title-->
+    <title>Main</title>
+    <!--style-->
+    <link rel="stylesheet" href="style/style1.css">
+    <!--fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kosugi+Maru&family=Lilita+One&display=swap" rel="stylesheet">
 </head>
-
-
-<body style="margin: 0;">
+<body style="margin: 0%;">
+    <!--circle background-->
+    <img style="width: 100%; margin: 0%; position: absolute; bottom: 0; z-index: -1;" src="assets/circle1.svg" alt="">
+    
     <!--top bar-->
-    <div id="TopBar1">
-        <!--logo-->
-        <img class="IMGlogo" src="Assets\logo1.png">
-        <h1 style=" float: left;" class="FPset1">Mp3Me</h1>
-
-        <!--buttons-->
-        <a href="I Find.html" style="float: left; margin: 1em; font-size: 2em;">Find</a>
-        <a href="I Playlists.html" style="float: left; margin: 1em; font-size: 2em;">Playlists</a>
-        <a href="I Artists.html" style="float: left; margin: 1em; font-size: 2em;">Artists</a>
-        <a href="I Support.html" style="float: right; margin: 1em; font-size: 2em;">Support</a>
+    <div id="TopBar" class="Container1">
+        <img style="float: left; height: 4em; transform: translate(0,0.3em)" src="assets/logo1.png">
+        <h1 class="FontStyle1" style="float: left; transform: translate(0,-0.2em)">Mp3Me</h1>
+        <a class="ATopBar1" style="float: right; transform: translate(0,0.3em);" href="support.html">Support</a>
+        <a class="ATopBar1" style="float: left; transform: translate(0,0.3em)" href="find.html">Find</a>
     </div>
 
-    <img src="Assets\GeometricShapes\circle1.svg" alt="" style="width: 100%; z-index: -1; top: -100%; position: absolute;">
+    <!--player bar-->
+    <div id="PlayerBar" class="Container1">
+        <span>
+            <progress class="Progressbar1" value="35" max="100" style="margin:1em; width: calc(100% - 7em);"></progress>
+        
+            <!--play button (pause and play)-->
+            <button id="PlayerBarPlayButton" class="ImgButton" style="margin: 1em; float: right;"><img id="PlayerBarPlayButtonImg" style="height: 3em;" src="assets\play_arrow.svg" alt=""></button>
+        </span>
 
-    <!--JS-->
-    <script src="scripts\script1.js"></script>
+        <div style="transform: translate(0,-3.5em);">
+            <h1 class="FontStyle2" style="transform: translate(0,1em); float: left;">Song Title</h1>
+            <h1 class="FontStyle2" style="transform: translate(1em,1em); float: left;">-</h1>
+            <h1 class="FontStyle2" style="transform: translate(2em,1em); float: left">Song Author/Authors</h1>
+            <h1 class="FontStyle2" style="transform: translate(3em,1em); float: left;">-</h1>
+            <h1 class="FontStyle2" style="transform: translate(4em,1em); float: left">Date (day/month/year)</h1>
+        </div>
+    </div>
+
+
+
+    <!--js-->
+    <script src="scripts/script1.js"></script>
 </body>
 </html>

@@ -1,54 +1,30 @@
-/*consts*/
-const BAddQueue1 = document.getElementById("BAddQueue1")
-const BPlayNext1 = document.getElementById("BPlayNext1")
-const BPlaylist1 = document.getElementById("BPlaylist1")
-const BClear_Queue = document.getElementById("BClear_Queue")
+//consts
+const PlayerBarPlayButtonImg = document.getElementById("PlayerBarPlayButtonImg")
+const PlayerBarPlayButton = document.getElementById("PlayerBarPlayButton")
 
-/*vars*/
-var queue_playlist = []
 
-/*other*/
-Array.prototype.insert = function ( index, ...items ) {
-    this.splice( index, 0, ...items );
-};
+//vars
+let playing = false
 
-/*functions*/
-    /*saveing and loading*/
+//func
 function autoload() {
-    queue_playlist = Array(localStorage.getItem("queue"));
-    console.log(queue_playlist);
     
 }
 
-function reset_saved_data() {
-    localStorage.setItem("queue", []);
+function toggle_play() {
+    console.log("test");
+    
+    if (playing == true) {
+        playing = false
+        PlayerBarPlayButtonImg.src = "assets\\play_arrow.svg"
+    }
+    else {
+        playing = true
+        PlayerBarPlayButtonImg.src = "assets\\pause.svg"
+    }
 }
 
-    /*queue*/
-function add_to_queue(item) {
-    queue_playlist.push(item);
-    localStorage.setItem("queue", queue_playlist);
-}
+//playbutton (pause and play)
+PlayerBarPlayButton.onclick = function(){
+    toggle_play()}
 
-function play_next(item) {
-    queue_playlist.insert(1,item)
-    localStorage.setItem("queue", queue_playlist);
-}
-
-/*other other other other*/
-
-autoload()
-
-/*click the buttons*/
-
-BAddQueue1.onclick = function() {
-    add_to_queue("song1")
-}
-
-BPlayNext1.onclick = function() {
-    play_next("song1")
-}
-
-BClear_Queue.onclick = function() {
-    reset_saved_data()
-}
