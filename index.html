@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--title-->
-    <title>Main</title>
+    <title>Main - Mp3Me</title>
     <!--style-->
     <link rel="stylesheet" href="style/style1.css">
     <!--fonts-->
@@ -22,19 +22,49 @@
         <a class="ATopBar1" style="float: left; transform: translate(0,0.3em)" href="find.html">Find</a>
     </div>
 
+    <div id="SongList" class="Container1">
+
+        <div id="Song" class="Container1">
+            <h1 style="float: left;" class="FontStyle2">Walk Through The Park</h1>
+            <h1 style="float: left; margin-left: 2em;" class="FontStyle2">Track Tribe - (21/4/2024)</h1>
+
+            <button id="PlayButton" class="ButtonStyle1" style="float: right;">Play</button>
+            <button id="PlayNextButton" class="ButtonStyle1" style="float: right;">Play Next</button>
+            <button id="AddToQueueButton" class="ButtonStyle1" style="float: right;">Add To Queue</button>
+        </div>
+
+        <div id="Song" class="Container1">
+            <h1 style="float: left;" class="FontStyle2">Title</h1>
+            <h1 style="float: left; margin-left: 2em;" class="FontStyle2">author - date (0/0/0000)</h1>
+
+            <button class="ButtonStyle1" style="float: right;">Play</button>
+            <button class="ButtonStyle1" style="float: right;">Play Next</button>
+            <button class="ButtonStyle1" style="float: right;">Add To Queue</button>
+        </div>
+
+    </div>
+
     <!--player bar-->
     <div id="PlayerBar" class="Container1">
         <span>
-            <progress class="Progressbar1" value="35" max="100" style="margin:1em; width: calc(100% - 7em);"></progress>
+            <progress class="Progressbar1" value="35" max="100" style="margin:1em; width: calc(100% - 21em);"></progress>
         
-            <!--play button (pause and play)-->
-            <button id="PlayerBarPlayButton" class="ImgButton" style="margin: 1em; float: right;"><img id="PlayerBarPlayButtonImg" style="height: 3em;" src="assets\play_arrow.svg" alt=""></button>
+            <!--play next song button-->
+            <button id="PlayerBarPlayNextButton" class="ImgButton" style="margin: 0.5em; float: right;"><img id="PlayerBarPlayNextButtonImg" style="height: 3em;" src="assets/play_next.svg" alt=""></button>
+            <!--play song button-->
+            <button id="PlayerBarPlayButton" class="ImgButton" style="margin: 0.5em; float: right;"><img id="PlayerBarPlayButtonImg" style="height: 3em;" src="assets\play_arrow.svg" alt=""></button>
+            <!--restart song button-->
+            <button id="PlayerBarRestartButton" class="ImgButton" style="margin: 0.5em; float: right;"><img id="PlayerBarRestartButtonImg" style="height: 3em;" src="assets/restart.svg" alt=""></button>
+            <!--play last song button-->
+            <button id="PlayerBarPlayLastButton" class="ImgButton" style="margin: 0.5em; float: right;"><img id="PlayerBarPlayLastButtonImg" style="height: 3em;" src="assets/play_last.svg" alt=""></button>
+            
+
         </span>
 
         <div style="transform: translate(0,-3.5em);">
-            <h1 class="FontStyle2" style="transform: translate(0,1em); float: left;">Song Title</h1>
+            <h1 id="CurrentSongTitleElement" class="FontStyle2" style="transform: translate(0,1em); float: left;">Song Title</h1>
             <h1 class="FontStyle2" style="transform: translate(1em,1em); float: left;">-</h1>
-            <h1 class="FontStyle2" style="transform: translate(2em,1em); float: left">Song Author/Authors</h1>
+            <h1 id="CurrentSongAuthorElement" class="FontStyle2" style="transform: translate(2em,1em); float: left">Song Author/Authors</h1>
             <h1 class="FontStyle2" style="transform: translate(3em,1em); float: left;">-</h1>
             <h1 class="FontStyle2" style="transform: translate(4em,1em); float: left">Date (day/month/year)</h1>
         </div>

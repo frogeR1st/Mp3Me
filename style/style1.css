@@ -56,17 +56,69 @@ Kanit
     z-index: 1;
 }
 
+#SongList {
+    margin: 1em;
+}
+
+#Song {
+    margin: 0.5em;
+    height: 5em;
+    padding: 0.5em;
+    overflow: auto;
+}
+
 /*Classes*/
+
+.ButtonStyle1 {
+    padding: 0.5em;
+    color: var(--Color2);
+    font-family: var(--FFamily2), var(--FFamilyBackup);
+    font-size:2em;
+    background-color: var(--BackgroundC3);
+    border-radius: 1.5em;
+    border: 0.25em;
+    border-color: var(--Color3);
+    border-style: solid;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+}
+
+.ButtonStyle1:hover {
+    padding: 0.5em;
+    color: var(--Color2);
+    font-family: var(--FFamily2), var(--FFamilyBackup);
+    font-size:2em;
+    background-color: var(--BackgroundC3);
+    border-radius: 1.5em;
+    border: 0.25em;
+    border-color: var(--LinkColor2);
+    border-style: solid;
+}
+
+.ButtonStyle1:active {
+    padding: 0.5em;
+    color: var(--Color2);
+    font-family: var(--FFamily2), var(--FFamilyBackup);
+    font-size:2em;
+    background-color: var(--BackgroundC3);
+    border-radius: 1.5em;
+    border: 0.25em;
+    border-color: var(--LinkColor4);
+    border-style: solid;
+}
 
 .Progressbar1 {
     border-radius: 1.5em;
     border: 0;
 
-
     background-color: var(--Color1);
 }
 
-progress::-moz-progress-bar {
+.Progressbar1::-webkit-progress-value{
+    background: var(--Color3);
+}
+
+.Progressbar1::-moz-progress-bar {
     background: var(--Color3);
   }
 
