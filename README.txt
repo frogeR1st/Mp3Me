@@ -1,3 +1,5 @@
+note this thing is horrible
+
 colors:
     white
     -#fffcff
